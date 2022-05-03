@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AngularApp";
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/angularjs")
+}
+
+<div class="row" ng-app="mlsApp" ng-controller="mainPageController as ctrl">
+    <h2>{{title}}</h2>    
+    
+    <p ng-if="loading">... loading data...</p>
+    <p ng-if="error">Some error has occurred</p>
+    
+    <table ng-if="cars" class="table table-info">
+        <thead>
+        <tr>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+        <tfoot>
+            <tr><td colspan="3">Data retrieved by both MVC and API controllers</td></tr>
+        </tfoot>
+        <tbody>
+        <tr ng-repeat="car in cars">
+        <td>{{car.Manufacturer}}</td>
+        <td><a href="{{car.WikipediaUrl}}" target="_blank">{{car.Name}}</a></td>
+        <td>{{car.Year}}</td>
+    
+        </tbody>
+    </table>
+</div>
+
+
+
