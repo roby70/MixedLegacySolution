@@ -3,8 +3,9 @@
 This solution represent a sandbox to try authentication based on IdentityServer in an 
 environment with different applications.
 
-The main goal is to integrate *legacy* application based on .NET Framework with new 
-applications based on .NET 6 sharing authentication and authorization processes.
+The main goal is to demonstrate how to integrate authentication and authorization 
+processes in a solution that contains *old legacy* application based on .NET Framework 
+with new applications based on .NET 6.
 
 The choice was to use IndentityServer4 since it's the framework choosen by Microsoft in
 it's project templates.
